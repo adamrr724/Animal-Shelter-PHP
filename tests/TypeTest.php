@@ -33,7 +33,7 @@
             $result = Type::getAll();
 
             //Assert
-            $this->assertEquals([$test_Type], $result);
+            $this->assertEquals($test_Type, $result[0]);
         }
 
         function test_getAll()
