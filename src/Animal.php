@@ -9,7 +9,7 @@
         private $breed;
         private $type_id;
 
-        function __construct($name, $id, $age, $admittance_date, $gender, $breed, $type_id)
+        function __construct($name, $id = null, $age, $admittance_date, $gender, $breed, $type_id)
         {
             $this->name = $name;
             $this->id = $id;
@@ -56,10 +56,5 @@
             return $this->type_id;
         }
     }
-
-
-
-
-
 
 ?>
