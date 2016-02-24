@@ -105,6 +105,23 @@
             //Assert
             $this->assertEquals([$test_animal, $test_animal2], $result);
         }
+
+        function test_find()
+        {
+            //Arrange
+            $animal_type = "Dog";
+            $animal_type2 = "Cat";
+            $test_Type = new Type($animal_type);
+            $test_Type->save();
+            $test_Type2 = new Type($animal_type2);
+            $test_Type2->save();
+
+            //Act
+            $result = Type::find($test_Type->getId());
+
+            //Assert
+            $this->assertEquals($test_Type, $result);
+        }
     }
 
 ?>
